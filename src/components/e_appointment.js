@@ -37,7 +37,7 @@ const E_Appointment_list = () => {
     }
 
     return (
-        <div className="product-list">
+        <div className="Doctors-list">
             <h3>Doctors List</h3>
             <input type="" className='search-product-box' placeholder='Search Doctors'
             onChange={searchHandle}

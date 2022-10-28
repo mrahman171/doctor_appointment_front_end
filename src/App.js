@@ -9,7 +9,7 @@ import E_Appointment from './components/e_appointment';
 import Appointment from './components/appointment';
 import DoctorsList from './components/doctors_list';
 import UpdatePatient from './components/UpdatePatientsInfo';
-
+import AppintmentList from './components/view_appoinment';
 function App() {
   return (
     <div className="App">
@@ -19,6 +19,7 @@ function App() {
        <Route element={<PrivateComponent />}>
        <Route path="/" element={<DoctorsList />} />
        <Route path="/add" element={<Appointment />} />
+       <Route path="/view/:id" element={<AppintmentList />} />
        <Route path="/update/:id" element={<UpdatePatient />} />
        <Route path="/logout" element={<h1> Logout Component</h1>} />
        <Route path="/e_appointment" element={<E_Appointment/>} />

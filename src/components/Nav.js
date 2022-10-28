@@ -21,6 +21,7 @@ const Nav = () => {
                     <ul className="nav-ul">
                         <li><Link to="/">Doctors</Link></li>
                         <li><Link to="/add">Appointment</Link></li>
+                        <li><Link to="/view/:id">View Appointment</Link></li>
                         <li><Link to="/update/:id"> Update Patient Info</Link></li>
                         <li><Link to="/e_appointment">Emergency Appointment</Link></li>
                         <li> <Link onClick={logout} to="/signup">Logout ({ JSON.parse(auth).name})</Link></li>

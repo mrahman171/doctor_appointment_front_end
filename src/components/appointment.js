@@ -37,7 +37,7 @@ const Appointment_list = () => {
     }
 
     return (
-        <div className="product-list">
+        <div className="Doctors-list">
             <h3>Doctors List</h3>
             <input type="" className='search-product-box' placeholder='Search Doctors'
             onChange={searchHandle}
@@ -62,7 +62,8 @@ const Appointment_list = () => {
                         <li>{item.doctor_available_end_time}</li>
                         <li>{item.contact}</li>
                         <li>
-                            <button onClick={() => Add_Appointment(item._id)}>Appointment</button>
+                            
+                            <Link to={"/view/"+item._id} >Add_Appointment </Link>
                              
                         </li>
 
