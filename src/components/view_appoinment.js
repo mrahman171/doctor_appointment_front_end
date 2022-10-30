@@ -17,6 +17,7 @@ const UpdateInfo = () => {
     useEffect(() => {
         getDoctorsDetails();
         getPatientDetails();
+        window.scrollTo(0, 0)
     }, [])
 
     const getDoctorsDetails = async () => {

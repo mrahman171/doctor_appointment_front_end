@@ -94,7 +94,7 @@
 
 .Doctors-list {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .Doctors-list ul li {
@@ -104,9 +104,26 @@
   padding: 5px;
 }
 
-.Doctors-list ul{
+.Appoinment-list ul{
   margin: 0;
 }
+
+.Appoinment-list {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.Appoinment-list ul li {
+  display: inline-block;
+  width: 130px;
+  border: 1px solid skyblue;
+  padding: 5px;
+}
+
+.Appoinment-list ul{
+  margin: 0;
+}
+
 
 .search-product-box {
   width: 400px;
