@@ -25,13 +25,14 @@ const Nav = () => {
                          
                         <li><Link to="/view">View Appointment</Link></li>
                         <li><Link to="/update/:id"> Update Patient Info</Link></li>
-                        <li><Link to="/e_appointment">Emergency Appointment</Link></li>
+                         
                         <li> <Link onClick={logout} to="/signup">Logout ({ JSON.parse(auth).name})</Link></li>
                     </ul>
                     :
                     <ul className="nav-ul nav-right">
                         <li> <Link to="/signup">Sign Up</Link></li>
                         <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/Admin">Admin Login</Link></li>
                     </ul>
             }
 

@@ -5,12 +5,13 @@ import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 import PrivateComponent from './components/PrivateComponent'
 import Login from './components/Login'
-import E_Appointment from './components/e_appointment';
+ 
 import Appointment from './components/appointment';
 import DoctorsList from './components/doctors_list';
 import UpdatePatient from './components/UpdatePatientsInfo';
 import AppintmentList from './components/view_appoinment';
 import ViewAppintmentList from './components/view';
+import Admin_Login from './components/Admin_login';
 import { useEffect } from 'react'
 function App() {
   useEffect(() => {
@@ -35,11 +36,12 @@ function App() {
             <Route path="/view" element={<ViewAppintmentList />} />
             <Route path="/update/:id" element={<UpdatePatient />} />
             <Route path="/logout" element={<h1> Logout Component</h1>} />
-            <Route path="/e_appointment" element={<E_Appointment />} />
+             
           </Route>
 
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/Admin" element={<Admin_Login />} />
 
         </Routes>
       </BrowserRouter>

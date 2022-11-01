@@ -46,30 +46,29 @@ const ViewAppionment_list = () => {
     return (
         <div className="Appoinment-list">
             <h3>Appoinment List</h3>
-            <input type="" className='search-product-box' placeholder='Search Doctors'
+            <input type="" className='search-product-box' placeholder='Search Appoinment'
             onChange={searchHandle}
              />
             <ul>
-                <li>S. No.</li>
-                <li>Appointment Time</li>
+                <li>S. No.</li>                
                 <li>Patient_name</li>
                 <li>age</li>
                 <li>Doctor_name</li>
                 <li>specialization</li>
-                <li>Available_start_time</li>
+                <li>Date & Time</li>
                 <li>Patient_Contact</li>
+                <li>Delete</li>
 
             </ul>
             {
                 appointments.length>0 ? appointments.map((item, index) =>
                     <ul key={item._id}>
-                        <li>{index + 1}</li>
-                        <li>{index + 20}</li>
+                        <li>{index + 1}</li>                        
                         <li>{item.name1}</li>
                         <li>{item.age}</li>
                         <li>{item.name}</li>
                         <li>{item.specialization}</li>
-                        <li>{item.doctor_available_start_time}</li>
+                        <li>{item.Appoinment_date_time}</li>
                         <li>{item.contact}</li>
                         <li><button onClick={() => deleteProduct(item._id)}>Delete</button></li>
                         

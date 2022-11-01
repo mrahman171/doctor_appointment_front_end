@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
+//import {DateTimePickerComponent} from '@syncfusion/ej2-react-calendars'
+import { DatePicker } from "rsuite";
 
 const UpdateInfo = () => {
     const auth = localStorage.getItem('user');
@@ -9,7 +11,7 @@ const UpdateInfo = () => {
     const [age, setAge] = React.useState('');
     const [name, setName] = React.useState('');
     const [specialization, setSpecialization] = React.useState('');
-    const [doctor_available_start_time, setStartTime] = React.useState('');
+    const [Appoinment_date_time, setStartTime] = React.useState('');
 
     const params = useParams();
     const navigate = useNavigate();
@@ -40,10 +42,10 @@ const UpdateInfo = () => {
     }
 
     const Add_Appointment = async () => {
-        console.warn(name1, contact, age, name, specialization, doctor_available_start_time)
+        console.warn(name1, contact, age, name, specialization, Appoinment_date_time)
         let result = await fetch("http://localhost:3000/Appointment/appointment", {
             method: 'post',
-            body: JSON.stringify({ name1, contact, age, name, specialization, doctor_available_start_time }),
+            body: JSON.stringify({ name1, contact, age, name, specialization, Appoinment_date_time}),
             headers: {
                 'Content-Type': 'Application/json'
             }
@@ -81,10 +83,10 @@ const UpdateInfo = () => {
                 value={specialization} onChange={(e) => { setSpecialization(e.target.value) }}
             />
 
-            <input type="text" placeholder='Enter StartTime' className='inputBox'
-                value={doctor_available_start_time} onChange={(e) => { setStartTime(e.target.value) }}
-            />
 
+            <input className='inputBox' type="datetime-local"
+                value={Appoinment_date_time} onChange={(e) => { setStartTime(e.target.value) }}
+            />
 
             <button onClick={Add_Appointment} className='appButton'>Confrom Appointment</button>
         </div>
